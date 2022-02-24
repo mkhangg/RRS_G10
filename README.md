@@ -28,7 +28,7 @@ assumptions that need to be considered, for example:**
 ## Prerequisite Tools
   1. SQLite, for executing the program.
   2. Visual Studio 2019, for writing SQL code and queries.
-  3. , for drawing ER diagram.
+  3. [FlowChart Maker](https://app.diagrams.net/), for drawing ER diagram.
 
 ## Installation
 Download packages from [sqlite.org](https://www.sqlite.org/download.html)
