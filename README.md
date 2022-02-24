@@ -31,7 +31,7 @@ assumptions that need to be considered, for example:**
   3. [FlowChart Maker](https://app.diagrams.net/), for drawing ER diagram.
 
 ## Installation SQLite
-Download packages from [sqlite.org](https://www.sqlite.org/download.html)
+Download packages from [sqlite.org](https://www.sqlite.org/download.html).
 
 ## ER Diagram
   1. Construct a clean and concise ER diagram for the RRS database. List your assumptions and clearly indicate the cardinality mappings
