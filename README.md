@@ -19,16 +19,16 @@ waitlist), category of the ticket booked.
 
 **Note: As the system is very large and is not feasible to develop therefore there are some
 assumptions that need to be considered, for example:**
-* Only two categories of tickets are available : Premium and General Ticket
-* The total number of tickets can be booked in each category (Premium and General) is 10
-* Number of tickets in waiting is 2
-* Total Number of trains are 5
+* Only two categories of tickets are available : Premium and General Ticket.
+* The total number of tickets can be booked in each category (Premium and General) is 10.
+* Number of tickets in waiting is 2.
+* Total Number of trains are 5.
 * Any stops made by a train before its final destination and their bookings are not considered.
 
 ## Prerequisite Tools
-  1. SQLite
-  2. Visual Studio 2019
-  3. 
+  1. SQLite, for executing the program.
+  2. Visual Studio 2019, for writing SQL code and queries.
+  3. , for drawing ER diagram.
 
 ## Installation
 Download packages from [sqlite.org](https://www.sqlite.org/download.html)
