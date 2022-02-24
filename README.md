@@ -113,7 +113,7 @@ INSERT INTO [Passenger] ([Fname], [Lname],[age], [Street], [City], [County], [Ph
 
   2. Enter a train name and retrieve all the passengers with confirmed status travelling in that train.
   ```python
-  SELECT Fname, Lname
+  SELECT PASSENGER.Fname, PASSENGER.Lname, PASSENGER.Ssn, TICKET.Status
   FROM TRAIN, PASSENGER, TICKET
   WHERE TRAIN.Train_name = 'Flying Scotsman' AND TRAIN.Train_num = TICKET.train_num AND TICKET.SSN = PASSENGER.SSN AND TICKET.Status = 'Booked';
   ```
