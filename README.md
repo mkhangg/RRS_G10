@@ -226,10 +226,10 @@ INSERT INTO [Passenger] ([Fname], [Lname],[age], [Street], [City], [County], [Ph
   3. Ashlei Burrola
 
 ### Contribution List:
-  1. Draw ER Diagram (Sao - 80%, Khang - 10%, Ashlei - 10%)
-  2. Establish Tables (Sao - 40%, Khang - 40%, Ashlei - 20%)
-  3. Load Data (Sao - 40%, Khang - 40%, Ashlei - 20%)
-  4. Write Queries (Khang - 65%, Sao - 25%, Ashlei - 10%)
-  5. Testing Ouputs (Ashlei - 90%, Sao - 10%)
+  1. Draw ER Diagram [Sao - 80%, Khang - 10%, Ashlei - 10%]
+  2. Establish Tables [Sao - 40%, Khang - 40%, Ashlei - 20%]
+  3. Load Data [Sao - 40%, Khang - 40%, Ashlei - 20%]
+  4. Write Queries [Khang - 65%, Sao - 25%, Ashlei - 10%]
+  5. Testing Ouputs [Ashlei - 90%, Sao - 10%]
   6. Write README.md [Khang - 70%, Sao - 30%]
 
