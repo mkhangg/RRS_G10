@@ -25,6 +25,11 @@ assumptions that need to be considered, for example:**
 * Total Number of trains are 5
 * Any stops made by a train before its final destination and their bookings are not considered.
 
+## Prerequisite Tools
+  1. SQLite
+  2. Visual Studio 2019
+  3. 
+
 ## Installation
 Download packages from [sqlite.org](https://www.sqlite.org/download.html)
 
