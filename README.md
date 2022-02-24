@@ -126,15 +126,22 @@ INSERT INTO [Passenger] ([Fname], [Lname],[age], [Street], [City], [County], [Ph
   ```
   4. Cancel a ticket (delete a record) and confirm that a passenger on the waiting list gets a ticket status confirmation.
    ```python
+  SELECT * FROM TICKET;
+  SELECT Waitlist FROM TRAIN WHERE Train_num = 3;
+
   DELETE FROM TICKET
-  WHERE Ssn = '264816896';
+  WHERE Ssn = '264816896' AND Train_num = 3;
 
   UPDATE TICKET
   SET Status = 'Booked'
-  WHERE Ssn = '256558303';
+  WHERE Ssn = '256558303' AND Train_num = 3;
 
   UPDATE TRAIN 
   SET Waitlist = Waitlist - 1;
+  WHERE AND Train_num = 3;
+
+  SELECT * FROM TICKET;
+  SELECT Waitlist FROM TRAIN WHERE Train_num = 3;
   ```
   5. List the passengers travelling on Sunday with confirmed tickets.
   ```python
