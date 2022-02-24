@@ -1,0 +1,6 @@
++-------+--------+-----------------+--------+
+| Fname | Lname  |   Train_name    | Status |
++-------+--------+-----------------+--------+
+| Art   | Venere | Golden Chariot  | Booked |
+| Art   | Venere | Flying Scotsman | Booked |
++-------+--------+-----------------+--------+
