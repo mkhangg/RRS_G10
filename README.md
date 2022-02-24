@@ -172,6 +172,7 @@ INSERT INTO [Passenger] ([Fname], [Lname],[age], [Street], [City], [County], [Ph
   FROM TRAIN;
   ```
   10. List all passengers who are travelling on Saturday and Sunday and are using premium service.
+  
   10.a Not using INTERSECT statement:
   ```python
   SELECT distinct PASSENGER.Fname, PASSENGER.Lname, PASSENGER.Ssn, TICKET.Ticket_category
