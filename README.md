@@ -13,3 +13,9 @@ fair for general ticket and weekdays on which train is available.
 seats available and number of seats already occupied.
 * Passenger has name, age, address of the passenger, status of reservation (if confirmed or
 waitlist), category of the ticket booked.
+
+
+**
+Note: As the system is very large and is not feasible to develop therefore there are some
+assumptions that need to be considered, for example:
+**
