@@ -1,0 +1,12 @@
++---------+---------+-----------+-----------------+
+|  Fname  |  Lname  |    Ssn    | Ticket_category |
++---------+---------+-----------+-----------------+
+| Art     | Venere  | 285200976 | Premium         |
+| Fetcher | Flosi   | 317434088 | Premium         |
+| Gladys  | Rim     | 286411536 | Premium         |
+| Yuki    | Whobrey | 294860856 | Premium         |
+| Sage    | Wieser  | 310908858 | Premium         |
+| Kris    | Marrier | 322273872 | Premium         |
+| Minna   | Amigon  | 256558303 | Premium         |
+| Abel    | Maclead | 302548590 | Premium         |
++---------+---------+-----------+-----------------+
