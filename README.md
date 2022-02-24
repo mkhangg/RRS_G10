@@ -117,6 +117,8 @@ INSERT INTO [Passenger] ([Fname], [Lname],[age], [Street], [City], [County], [Ph
   FROM TRAIN, PASSENGER, TICKET
   WHERE TRAIN.Train_name = 'Flying Scotsman' AND TRAIN.Train_num = TICKET.train_num AND TICKET.SSN = PASSENGER.SSN AND TICKET.Status = 'Booked';
   ```
+  The output is [query1.txt](https://github.com/mkhangg/RRS_G10/blob/main/Queries_Outputs/query1.txt) file.
+  
   3. List all the trains where the waiting list is full along with passengers on the waiting list in descending order.
   ```python
   SELECT TRAIN.Train_name, PASSENGER.Fname, PASSENGER.Lname, PASSENGER.Ssn, TICKET.Status
