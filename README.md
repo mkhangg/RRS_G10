@@ -221,7 +221,15 @@ INSERT INTO [Passenger] ([Fname], [Lname],[age], [Street], [City], [County], [Ph
   and then jot down any queries that are needed to test (like above). The results are in [Queries_Outputs](https://github.com/mkhangg/RRS_G10/tree/main/Queries_Outputs) folder.
 
 ## Contributors
-  1. Ashlei Burrola
+  1. Khang Nguyen
   2. Sao Nguyen
-  3. Khang Nguyen
+  3. Ashlei Burrola
+
+### Contribution List:
+  1. Draw ER Diagram (Sao - 80%, Khang - 10%, Ashlei - 10%)
+  2. Establish Tables (Sao - 40%, Khang - 40%, Ashlei - 20%)
+  3. Load Data (Sao - 40%, Khang - 40%, Ashlei - 20%)
+  4. Write Queries (Khang - 65%, Sao - 25%, Ashlei - 10%)
+  5. Testing Ouputs (Ashlei - 90%, Sao - 10%)
+  6. Write README.md (Khang - 70%, Sao - 30%)
 
