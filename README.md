@@ -213,12 +213,12 @@ INSERT INTO [Passenger] ([Fname], [Lname],[age], [Street], [City], [County], [Ph
   
   Either of them is used, the output queries are the same.
   
- ## Testing & Query Outputs
+ ## 
  After creating the [RRS.sql](https://github.com/mkhangg/RRS_G10/blob/main/Source_code/RRS.sql) file and the SQL queries, we can test the queries using the following command:
  ```python
  .read RRS.sql
   ```
-  and then jot down any queries that are needed to test.
+  and then jot down any queries that are needed to test (like above). The results are in [Queries_Outputs](https://github.com/mkhangg/RRS_G10/tree/main/Queries_Outputs) folder.
 
 ## Contributors
   1. Ashlei Burrola
