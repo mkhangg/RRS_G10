@@ -39,7 +39,7 @@ Download packages from [sqlite.org](https://www.sqlite.org/download.html).
 ![Screenshot 2022-02-22 203815](https://user-images.githubusercontent.com/46115541/155575750-4dfa7e91-e53e-4d52-a4f7-7842ff99e859.png)
 
 ## Create Tables 
-Using **CREATE** statements to create tables corresponding to the entities in ER diagram in ** [RRS.sql](https://github.com/mkhangg/RRS_G10/blob/main/Source_code/RRS.sql) file **:
+Using **CREATE** statements to create tables corresponding to the entities in ER diagram in **[RRS.sql](https://github.com/mkhangg/RRS_G10/blob/main/Source_code/RRS.sql) file**:
 ```python
 CREATE TABLE [Train]
 (
