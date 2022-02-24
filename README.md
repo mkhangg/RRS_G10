@@ -30,7 +30,7 @@ assumptions that need to be considered, for example:**
   2. Visual Studio 2019, for writing SQL code and queries.
   3. [FlowChart Maker](https://app.diagrams.net/), for drawing ER diagram.
 
-## Installation SQLite
+## Install SQLite
 Download packages from [sqlite.org](https://www.sqlite.org/download.html).
 
 ## ER Diagram
@@ -39,6 +39,7 @@ Download packages from [sqlite.org](https://www.sqlite.org/download.html).
 ![Screenshot 2022-02-22 203815](https://user-images.githubusercontent.com/46115541/155575750-4dfa7e91-e53e-4d52-a4f7-7842ff99e859.png)
 
 ## Create Tables 
+Using ** CREATE ** statements to create tables corresponding to the entities in ER diagram in ** [RRS.sql](https://github.com/mkhangg/RRS_G10/blob/main/Source_code/RRS.sql) file **:
 ```python
 CREATE TABLE [Train]
 (
@@ -87,8 +88,15 @@ CREATE TABLE [Passenger]
    CONSTRAINT [PK_Ssn] PRIMARY KEY ([Ssn])
 );
 ```
+Using ** CREATE INDEX ** to create foreign keys between tables:
+```python
+CREATE INDEX [IFK_Train] ON [Train] ([Train_num]);
+CREATE INDEX [IFK_Ticket] ON [Ticket] ([Ticket_num]);
+CREATE INDEX [IFK_Passenger] ON [Passenger] ([Ssn]);
+```
 
-## Load data into the Database
+## Load Data into Database
+Using ** INSERT INTO ** to load data into the Database; for example, inserting an element into TRAIN, inserting an element into TICKET, inserting an element into PASSENGER, respectively: 
 ```python
 INSERT INTO [Train] ([Date], [Ticket_num], [Train_num], [Train_name], [Pre_fair], [Gen_fair], [Pre_available], [Pre_occupied], [Gen_available], [Gen_occupied], [Waitlist], [Source], [Destination], [Weekday]) 
             VALUES ('19/02/2022', 1, 1, 'Orient Express', 800, 600, 10, 0, 10, 0, 0, 'Paris', 'Istanbul', 'Monday, Tuesday, Wednesday, Thursday, Friday');
