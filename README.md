@@ -28,12 +28,12 @@ assumptions that need to be considered, for example:**
 ## Installation
 Download packages from [sqlite.org](https://www.sqlite.org/download.html)
 
-## Part 1: ER Diagram
+## ER Diagram
   1. Construct a clean and concise ER diagram for the RRS database. List your assumptions and clearly indicate the cardinality mappings
 
 ![Screenshot 2022-02-22 203815](https://user-images.githubusercontent.com/46115541/155575750-4dfa7e91-e53e-4d52-a4f7-7842ff99e859.png)
 
-## Part 2: SQL Queries
+## SQL Queries
   Write SQL queries to get the results of the following queries: 
 
   2. Enter a train name and retrieve all the passengers with confirmed status travelling in that train.
@@ -95,5 +95,12 @@ Download packages from [sqlite.org](https://www.sqlite.org/download.html)
   FROM TRAIN, PASSENGER, TICKET
   WHERE TICKET.Ticket_category = 'Premium' AND TICKET.Ssn = PASSENGER.Ssn AND TICKET.Train_num = TRAIN.Train_num AND TRAIN.Weekday LIKE '%Sunday%' AND TRAIN.Weekday LIKE     '%Saturday%';
   ```
+  
+ ## Testing
+ After creating the [RRS.sql](https://github.com/mkhangg/RRS_G10/blob/main/Source_code/RRS.sql) file and the SQL queries, we can test the queries using the following command:
+ ```python
+ .read RRS.sql
+  ```
+  and then jot down any queries that are needed to test.
 
 
