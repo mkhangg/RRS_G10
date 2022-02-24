@@ -108,4 +108,8 @@ Download packages from [sqlite.org](https://www.sqlite.org/download.html)
   ```
   and then jot down any queries that are needed to test.
 
+## Contributions
+  1. Ashlei Burrola
+  2. Sao Nguyen
+  3. Khang Nguyen
 
