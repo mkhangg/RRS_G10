@@ -231,5 +231,5 @@ INSERT INTO [Passenger] ([Fname], [Lname],[age], [Street], [City], [County], [Ph
   3. Load Data (Sao - 40%, Khang - 40%, Ashlei - 20%)
   4. Write Queries (Khang - 65%, Sao - 25%, Ashlei - 10%)
   5. Testing Ouputs (Ashlei - 90%, Sao - 10%)
-  6. Write README.md (Khang - 70%, Sao - 30%)
+  6. Write README.md [Khang - 70%, Sao - 30%]
 
