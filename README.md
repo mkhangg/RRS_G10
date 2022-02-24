@@ -40,12 +40,57 @@ assumptions that need to be considered, for example:**
   WHERE TRAIN.Train_name = 'Flying Scotsman' AND TRAIN.Train_num = TICKET.train_num AND TICKET.SSN = PASSENGER.SSN AND TICKET.Status = 'Booked';
   ```
   3. List all the trains where the waiting list is full along with passengers on the waiting list in descending order.
-  5. Cancel a ticket (delete a record) and confirm that a passenger on the waiting list gets a ticket status confirmation.
-  6. List the passengers travelling on Sunday with confirmed tickets.
-  7. For each train, list the train’s name and the number of occupied and available seats.
-  8. Enter the passenger’s last name and first name and retrieve all trains they are booked on.
-  9. Get the train information (Train Number, Train Name, Source and Destination) and passenger information (Name, Address, Category, ticket status) of passengers who are between the ages of 50 to 60.
-  10. List all the train name along with count of passengers it is carrying.
-  11. List all passengers who are travelling on Saturday and Sunday and are using premium service.
+  ```python
+  SELECT TRAIN.Train_name, PASSENGER.Fname, PASSENGER.Lname
+  FROM TRAIN, PASSENGER, TICKET
+  WHERE TRAIN.Waitlist > 2 AND TRAIN.Train_num = Ticket.Train_num AND TICKET.Status = 'WaitL' AND TICKET.Ssn = PASSENGER.Ssn
+  order by Fname desc;
+  ```
+  4. Cancel a ticket (delete a record) and confirm that a passenger on the waiting list gets a ticket status confirmation.
+   ```python
+  DELETE FROM TICKET
+  WHERE Ssn = '264816896';
+
+  UPDATE TICKET
+  SET Status = 'Booked'
+  WHERE Ssn = '256558303';
+
+  UPDATE TRAIN 
+  SET Waitlist = Waitlist - 1;
+  ```
+  5. List the passengers travelling on Sunday with confirmed tickets.
+  ```python
+  SELECT distinct PASSENGER.Fname, PASSENGER.Lname
+  FROM TRAIN, PASSENGER, TICKET
+  WHERE TICKET.Status = 'Booked' AND TICKET.Ssn = PASSENGER.Ssn AND TICKET.Train_num = TRAIN.Train_num AND TRAIN.Weekday LIKE '%Sunday%';
+  ```
+  6. For each train, list the train’s name and the number of occupied and available seats.
+  ```python
+  SELECT Train_name, Pre_available, Gen_available, Pre_occupied, Gen_occupied
+  FROM TRAIN;
+  ```
+  7. Enter the passenger’s last name and first name and retrieve all trains they are booked on.
+  ```python
+  SELECT TRAIN.Train_name
+  FROM TRAIN, PASSENGER, TICKET
+  WHERE PASSENGER.Fname = 'Art' AND PASSENGER.Lname = 'Venere' AND PASSENGER.Ssn = TICKET.Ssn AND TICKET.Train_num = TRAIN.Train_num;
+  ```
+  8. Get the train information (Train Number, Train Name, Source and Destination) and passenger information (Name, Address, Category, ticket status) of passengers who are between the ages of 50 to 60.
+  ```python
+  SELECT TRAIN.Train_num, TRAIN.Train_name, TRAIN.Source, TRAIN.Destination, PASSENGER.Fname, PASSENGER.Lname, PASSENGER.Street, TICKET.Ticket_category, TICKET.Status
+  FROM TRAIN, PASSENGER, TICKET
+  WHERE PASSENGER.Age <= 60 AND PASSENGER.Age >= 50 AND PASSENGER.Ssn = TICKET.Ssn AND TICKET.Train_num = TRAIN.Train_num;
+  ```
+  9. List all the train name along with count of passengers it is carrying.
+  ```python
+  SELECT TRAIN.Train_name, TRAIN.Pre_occupied + TRAIN.Gen_occupied
+  FROM TRAIN;
+  ```
+  10. List all passengers who are travelling on Saturday and Sunday and are using premium service.
+  ```python
+  SELECT PASSENGER.Fname, PASSENGER.Lname
+  FROM TRAIN, PASSENGER, TICKET
+  WHERE TICKET.Ticket_category = 'Premium' AND TICKET.Ssn = PASSENGER.Ssn AND TICKET.Train_num = TRAIN.Train_num AND TRAIN.Weekday LIKE '%Sunday%' AND TRAIN.Weekday LIKE     '%Saturday%';
+  ```
 
 
