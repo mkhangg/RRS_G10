@@ -25,6 +25,9 @@ assumptions that need to be considered, for example:**
 * Total Number of trains are 5
 * Any stops made by a train before its final destination and their bookings are not considered.
 
+## Installation
+Download packages from [sqlite.org](https://www.sqlite.org/download.html)
+
 ## Part 1: ER Diagram
   1. Construct a clean and concise ER diagram for the RRS database. List your assumptions and clearly indicate the cardinality mappings
 
