@@ -1,0 +1,9 @@
++-----------+---------+-----------+--------+
+|   Fname   |  Lname  |    Ssn    | Status |
++-----------+---------+-----------+--------+
+| Josephine | Darakjy | 240471168 | Booked |
+| Art       | Venere  | 285200976 | Booked |
+| Fetcher   | Flosi   | 317434088 | Booked |
+| Sage      | Wieser  | 310908858 | Booked |
+| Kris      | Marrier | 322273872 | Booked |
++-----------+---------+-----------+--------+
