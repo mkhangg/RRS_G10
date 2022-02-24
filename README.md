@@ -1,5 +1,7 @@
 # Railway Reservation System Database
 
+## Description 
+
 You are hired by a Railway Company, you are asked to design a system which provides
 information to passengers about the trains available on the bases of source and destination, other
 information like status of the train, status of passenger ticket, how many seats are available etc.
@@ -24,3 +26,6 @@ assumptions that need to be considered, for example:**
 * Any stops made by a train before its final destination and their bookings are not considered.
 
 ## Part 1: ER Diagram
+  1. Construct a clean and concise ER diagram for the RRS database. List your assumptions and clearly indicate the cardinality mappings
+## Part 2: SQL Queries
+
