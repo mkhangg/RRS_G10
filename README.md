@@ -27,5 +27,7 @@ assumptions that need to be considered, for example:**
 
 ## Part 1: ER Diagram
   1. Construct a clean and concise ER diagram for the RRS database. List your assumptions and clearly indicate the cardinality mappings
+![Screenshot 2022-02-22 203815](https://user-images.githubusercontent.com/46115541/155575750-4dfa7e91-e53e-4d52-a4f7-7842ff99e859.png)
+
 ## Part 2: SQL Queries
 
