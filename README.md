@@ -15,7 +15,5 @@ seats available and number of seats already occupied.
 waitlist), category of the ticket booked.
 
 
-**
-Note: As the system is very large and is not feasible to develop therefore there are some
-assumptions that need to be considered, for example:
-**
+**Note: As the system is very large and is not feasible to develop therefore there are some
+assumptions that need to be considered, for example:**
