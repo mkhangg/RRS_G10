@@ -156,7 +156,7 @@ INSERT INTO [Passenger] ([Fname], [Lname],[age], [Street], [City], [County], [Ph
   ```
   7. Enter the passenger’s last name and first name and retrieve all trains they are booked on.
   ```python
-  SELECT TRAIN.Train_name
+  SELECT PASSENGER.Fname, PASSENGER.Lname, TRAIN.Train_name, TICKET.Status
   FROM TRAIN, PASSENGER, TICKET
   WHERE PASSENGER.Fname = 'Art' AND PASSENGER.Lname = 'Venere' AND PASSENGER.Ssn = TICKET.Ssn AND TICKET.Train_num = TRAIN.Train_num;
   ```
