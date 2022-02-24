@@ -1,0 +1,9 @@
++------------------+-----------------------------------------+
+|    Train_name    | TRAIN.Pre_occupied + TRAIN.Gen_occupied |
++------------------+-----------------------------------------+
+| Orient Express   | 0                                       |
+| Flying Scotsman  | 7                                       |
+| Golden Arrow     | 20                                      |
+| Golden Chariot   | 11                                      |
+| Maharaja Express | 7                                       |
++------------------+-----------------------------------------+
