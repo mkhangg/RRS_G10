@@ -145,7 +145,7 @@ INSERT INTO [Passenger] ([Fname], [Lname],[age], [Street], [City], [County], [Ph
   ```
   5. List the passengers travelling on Sunday with confirmed tickets.
   ```python
-  SELECT distinct PASSENGER.Fname, PASSENGER.Lname
+  SELECT distinct PASSENGER.Fname, PASSENGER.Lname, PASSENGER.Ssn, TICKET.Status
   FROM TRAIN, PASSENGER, TICKET
   WHERE TICKET.Status = 'Booked' AND TICKET.Ssn = PASSENGER.Ssn AND TICKET.Train_num = TRAIN.Train_num AND TRAIN.Weekday LIKE '%Sunday%';
   ```
