@@ -30,7 +30,7 @@ assumptions that need to be considered, for example:**
   2. Visual Studio 2019, for writing SQL code and queries.
   3. [FlowChart Maker](https://app.diagrams.net/), for drawing ER diagram.
 
-## Installation
+## Installation SQLite
 Download packages from [sqlite.org](https://www.sqlite.org/download.html)
 
 ## ER Diagram
