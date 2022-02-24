@@ -38,6 +38,68 @@ Download packages from [sqlite.org](https://www.sqlite.org/download.html)
 
 ![Screenshot 2022-02-22 203815](https://user-images.githubusercontent.com/46115541/155575750-4dfa7e91-e53e-4d52-a4f7-7842ff99e859.png)
 
+## Create Tables 
+```python
+CREATE TABLE [Train]
+(
+   [Date] CHAR(10),
+   [Train_num] INT  NOT NULL,
+   [Train_name] NVARCHAR(200),
+   [Source] NVARCHAR(150) NOT NULL,
+   [Destination] NVARCHAR(150) NOT NULL,
+   [Weekday] NVARCHAR(200),
+   [Pre_available] INT,
+   [Gen_available] INT,
+   [Pre_occupied] INT,
+   [Gen_occupied] INT,
+   [Waitlist] INT,
+   [Pre_fair] REAL,
+   [Gen_fair] REAL,
+   [Ticket_num] INT NOT NULL,
+   CONSTRAINT [PK_Train] PRIMARY KEY ([Train_num]),
+   FOREIGN KEY ([Ticket_num]) REFERENCES [Ticket] ([Ticket_num])
+);
+
+CREATE TABLE [Ticket]
+(
+   [Ticket_num] INT NOT NULL,
+   [Ticket_category] CHAR(7),
+   [Status] NVARCHAR(8) NOT NULL,
+   [Train_num] INT NOT NULL,
+   [Train_name] NVARCHAR(200),
+   [Ssn] INT NOT NULL,
+   CONSTRAINT [PK_Ticket] PRIMARY KEY ([Ticket_num]),
+   FOREIGN KEY ([Train_num]) REFERENCES [Ticket] ([Train_num]),
+   FOREIGN KEY ([Train_name]) REFERENCES [Train] ([Train_name]),
+   FOREIGN KEY ([Ssn]) REFERENCES [Passenger] ([Ssn])
+);
+
+CREATE TABLE [Passenger]
+(
+   [Fname] NVARCHAR(100) NOT NULL,
+   [Lname] NVARCHAR(100) NOT NULL,
+   [Age] INT,
+   [Street] NVARCHAR(150),
+   [City] NVARCHAR(50),
+   [County] NVARCHAR(50),
+   [Phone_num] CHAR(12),
+   [Ssn] INT NOT NULL,
+   CONSTRAINT [PK_Ssn] PRIMARY KEY ([Ssn])
+);
+```
+
+## Load data into the Database
+```python
+INSERT INTO [Train] ([Date], [Ticket_num], [Train_num], [Train_name], [Pre_fair], [Gen_fair], [Pre_available], [Pre_occupied], [Gen_available], [Gen_occupied], [Waitlist], [Source], [Destination], [Weekday]) 
+            VALUES ('19/02/2022', 1, 1, 'Orient Express', 800, 600, 10, 0, 10, 0, 0, 'Paris', 'Istanbul', 'Monday, Tuesday, Wednesday, Thursday, Friday');
+            
+INSERT INTO [Ticket] ([Ticket_num], [Ssn], [Train_num], [Ticket_category], [Status]) 
+            VALUES (1, 264816896, 3, 'Premium', 'Booked');
+           
+INSERT INTO [Passenger] ([Fname], [Lname],[age], [Street], [City], [County], [Phone_num], [Ssn]) 
+            VALUES ('James', 'Butt',54 , '6649 N Blue Gum St', 'New Orleans', 'Orleans', '504-845-1427', 264816896);
+```
+
 ## SQL Queries
   Write SQL queries to get the results of the following queries: 
 
@@ -108,7 +170,7 @@ Download packages from [sqlite.org](https://www.sqlite.org/download.html)
   ```
   and then jot down any queries that are needed to test.
 
-## Contributions
+## Contributors
   1. Ashlei Burrola
   2. Sao Nguyen
   3. Khang Nguyen
