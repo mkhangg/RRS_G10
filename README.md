@@ -172,11 +172,25 @@ INSERT INTO [Passenger] ([Fname], [Lname],[age], [Street], [City], [County], [Ph
   FROM TRAIN;
   ```
   10. List all passengers who are travelling on Saturday and Sunday and are using premium service.
+  10.a Not using INTERSECT statement:
   ```python
-  SELECT PASSENGER.Fname, PASSENGER.Lname
+  SELECT distinct PASSENGER.Fname, PASSENGER.Lname, PASSENGER.Ssn, TICKET.Ticket_category
   FROM TRAIN, PASSENGER, TICKET
-  WHERE TICKET.Ticket_category = 'Premium' AND TICKET.Ssn = PASSENGER.Ssn AND TICKET.Train_num = TRAIN.Train_num AND TRAIN.Weekday LIKE '%Sunday%' AND TRAIN.Weekday LIKE     '%Saturday%';
+  WHERE TRAIN.Weekday LIKE '%Saturday, Sunday%' AND TRAIN.Train_num = TICKET.Train_num AND TICKET.Ssn = PASSENGER.Ssn AND TICKET.Ticket_category = 'Premium';
   ```
+  10.b Using INTERSECT statement:
+  ```python
+  SELECT distinct PASSENGER.Fname, PASSENGER.Lname, PASSENGER.Ssn, TICKET.Ticket_category
+  FROM TRAIN, PASSENGER, TICKET
+  WHERE TRAIN.Weekday LIKE '%Saturday%' AND TRAIN.Train_num = TICKET.Train_num AND TICKET.Ssn = PASSENGER.Ssn AND TICKET.Ticket_category = 'Premium'
+
+  INTERSECT
+
+  SELECT distinct PASSENGER.Fname, PASSENGER.Lname, PASSENGER.Ssn, TICKET.Ticket_category
+  FROM TRAIN, PASSENGER, TICKET
+  WHERE TRAIN.Weekday LIKE '%Sunday%' AND TRAIN.Train_num = TICKET.Train_num AND TICKET.Ssn = PASSENGER.Ssn AND TICKET.Ticket_category = 'Premium';
+  ```
+  Either of them is used, the output queries are the same.
   
  ## Testing & Query Outputs
  After creating the [RRS.sql](https://github.com/mkhangg/RRS_G10/blob/main/Source_code/RRS.sql) file and the SQL queries, we can test the queries using the following command:
