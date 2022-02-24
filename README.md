@@ -126,6 +126,8 @@ INSERT INTO [Passenger] ([Fname], [Lname],[age], [Street], [City], [County], [Ph
   WHERE TRAIN.Waitlist > 2 AND TRAIN.Train_num = Ticket.Train_num AND TICKET.Status = 'WaitL' AND TICKET.Ssn = PASSENGER.Ssn
   order by Fname desc;
   ```
+  The output is [query2.txt](https://github.com/mkhangg/RRS_G10/blob/main/Queries_Outputs/query2.txt) file.
+  
   4. Cancel a ticket (delete a record) and confirm that a passenger on the waiting list gets a ticket status confirmation.
    ```python
   SELECT Ssn, Train_num, Ticket_category, Status FROM TICKET;
@@ -145,34 +147,46 @@ INSERT INTO [Passenger] ([Fname], [Lname],[age], [Street], [City], [County], [Ph
   SELECT Ssn, Train_num, Ticket_category, Status FROM TICKET;
   SELECT Train_name, Train_num, Waitlist FROM TRAIN WHERE Train_num = 3;
   ```
+  The output is [query3.txt](https://github.com/mkhangg/RRS_G10/blob/main/Queries_Outputs/query3.txt) file.
+  
   5. List the passengers travelling on Sunday with confirmed tickets.
   ```python
   SELECT distinct PASSENGER.Fname, PASSENGER.Lname, PASSENGER.Ssn, TICKET.Status
   FROM TRAIN, PASSENGER, TICKET
   WHERE TICKET.Status = 'Booked' AND TICKET.Ssn = PASSENGER.Ssn AND TICKET.Train_num = TRAIN.Train_num AND TRAIN.Weekday LIKE '%Sunday%';
   ```
+  The output is [query4.txt](https://github.com/mkhangg/RRS_G10/blob/main/Queries_Outputs/query4.txt) file.
+  
   6. For each train, list the train’s name and the number of occupied and available seats.
   ```python
   SELECT Train_name, Pre_available, Gen_available, Pre_occupied, Gen_occupied
   FROM TRAIN;
   ```
+  The output is [query5.txt](https://github.com/mkhangg/RRS_G10/blob/main/Queries_Outputs/query5.txt) file.
+  
   7. Enter the passenger’s last name and first name and retrieve all trains they are booked on.
   ```python
   SELECT PASSENGER.Fname, PASSENGER.Lname, TRAIN.Train_name, TICKET.Status
   FROM TRAIN, PASSENGER, TICKET
   WHERE PASSENGER.Fname = 'Art' AND PASSENGER.Lname = 'Venere' AND PASSENGER.Ssn = TICKET.Ssn AND TICKET.Train_num = TRAIN.Train_num;
   ```
+  The output is [query6.txt](https://github.com/mkhangg/RRS_G10/blob/main/Queries_Outputs/query6.txt) file.
+  
   8. Get the train information (Train Number, Train Name, Source and Destination) and passenger information (Name, Address, Category, ticket status) of passengers who are between the ages of 50 to 60.
   ```python
   SELECT TRAIN.Train_num, TRAIN.Train_name, TRAIN.Source, TRAIN.Destination, PASSENGER.Fname, PASSENGER.Lname, PASSENGER.Age, PASSENGER.Street, TICKET.Ticket_category, TICKET.Status
   FROM TRAIN, PASSENGER, TICKET
   WHERE PASSENGER.Age <= 60 AND PASSENGER.Age >= 50 AND PASSENGER.Ssn = TICKET.Ssn AND TICKET.Train_num = TRAIN.Train_num;
   ```
+  The output is [query7.txt](https://github.com/mkhangg/RRS_G10/blob/main/Queries_Outputs/query7.txt) file.
+  
   9. List all the train name along with count of passengers it is carrying.
   ```python
   SELECT TRAIN.Train_name, TRAIN.Pre_occupied + TRAIN.Gen_occupied
   FROM TRAIN;
   ```
+  The output is [query8.txt](https://github.com/mkhangg/RRS_G10/blob/main/Queries_Outputs/query8.txt) file.
+  
   10. List all passengers who are travelling on Saturday and Sunday and are using premium service.
   
   10.a Not using INTERSECT statement:
@@ -181,6 +195,8 @@ INSERT INTO [Passenger] ([Fname], [Lname],[age], [Street], [City], [County], [Ph
   FROM TRAIN, PASSENGER, TICKET
   WHERE TRAIN.Weekday LIKE '%Saturday, Sunday%' AND TRAIN.Train_num = TICKET.Train_num AND TICKET.Ssn = PASSENGER.Ssn AND TICKET.Ticket_category = 'Premium';
   ```
+  The output is [query9a.txt](https://github.com/mkhangg/RRS_G10/blob/main/Queries_Outputs/query9a.txt) file.
+  
   10.b Using INTERSECT statement:
   ```python
   SELECT distinct PASSENGER.Fname, PASSENGER.Lname, PASSENGER.Ssn, TICKET.Ticket_category
@@ -193,6 +209,8 @@ INSERT INTO [Passenger] ([Fname], [Lname],[age], [Street], [City], [County], [Ph
   FROM TRAIN, PASSENGER, TICKET
   WHERE TRAIN.Weekday LIKE '%Sunday%' AND TRAIN.Train_num = TICKET.Train_num AND TICKET.Ssn = PASSENGER.Ssn AND TICKET.Ticket_category = 'Premium';
   ```
+  The output is [query9b.txt](https://github.com/mkhangg/RRS_G10/blob/main/Queries_Outputs/query9b.txt) file.
+  
   Either of them is used, the output queries are the same.
   
  ## Testing & Query Outputs
