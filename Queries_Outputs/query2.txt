@@ -1,0 +1,10 @@
++--------------+----------+-----------+-----------+--------+
+|  Train_name  |  Fname   |   Lname   |    Ssn    | Status |
++--------------+----------+-----------+-----------+--------+
+| Golden Arrow | Minna    | Amigon    | 256558303 | WaitL  |
+| Golden Arrow | Meaghan  | Garufi    | 290123298 | WaitL  |
+| Golden Arrow | Mattie   | Poquette  | 331293204 | WaitL  |
+| Golden Arrow | Kiley    | Caldarera | 284965676 | WaitL  |
+| Golden Arrow | Graciela | Ruta      | 277292710 | WaitL  |
+| Golden Arrow | Cammy    | Albares   | 331160133 | WaitL  |
++--------------+----------+-----------+-----------+--------+
