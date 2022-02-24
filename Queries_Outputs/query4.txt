@@ -1,0 +1,17 @@
++-----------+-----------+-----------+--------+
+|   Fname   |   Lname   |    Ssn    | Status |
++-----------+-----------+-----------+--------+
+| Josephine | Darakjy   | 240471168 | Booked |
+| Art       | Venere    | 285200976 | Booked |
+| Fetcher   | Flosi     | 317434088 | Booked |
+| Sage      | Wieser    | 310908858 | Booked |
+| Kris      | Marrier   | 322273872 | Booked |
+| Gladys    | Rim       | 286411536 | Booked |
+| Yuki      | Whobrey   | 294860856 | Booked |
+| Minna     | Amigon    | 256558303 | Booked |
+| Abel      | Maclead   | 302548590 | Booked |
+| Kiley     | Caldarera | 284965676 | Booked |
+| Graciela  | Ruta      | 277292710 | Booked |
+| Cammy     | Albares   | 331160133 | Booked |
+| Mattie    | Poquette  | 331293204 | Booked |
++-----------+-----------+-----------+--------+
