@@ -22,3 +22,5 @@ assumptions that need to be considered, for example:**
 * Number of tickets in waiting is 2
 * Total Number of trains are 5
 * Any stops made by a train before its final destination and their bookings are not considered.
+
+## Part 1: ER Diagram
